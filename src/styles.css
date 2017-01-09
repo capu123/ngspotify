@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+#logo {
+    width: 45px;
+    height: 40px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 10px;
+    margin-left: 2px;
+}
