@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { AboutComponent } from './components/about/about.component'
 import { SearchComponent } from './components/search/search.component'
+import { ArtistComponent } from './components/artist/artist.component'
 
 import { SpotifyService } from './services/spotify.service'
 
@@ -16,7 +17,8 @@ import { SpotifyService } from './services/spotify.service'
     AppComponent,
     NavbarComponent,
     AboutComponent,
-    SearchComponent
+    SearchComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { SpotifyService } from './services/spotify.service'
     RouterModule.forRoot([ //here we configure our default route & any wild card routes
       { path: '', component: SearchComponent },
       { path: 'about', component: AboutComponent },
-      { path: '**', redirectTo: '', pathMatch: 'full' }
+      { path: 'artist/:id', component: ArtistComponent }
+      //{ path: '**', redirectTo: '', pathMatch: 'full' }
     ]),
   ],
   providers: [ SpotifyService ],
